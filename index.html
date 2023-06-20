@@ -4,7 +4,7 @@
 function putStatus() {
     $.ajax({
         type: "GET",
-        url: "https://api.srv3r.com/toggle/",
+        url: "https://peachpuff.srv3r.com/api/index.php",
         data: {toggle_select: true},
         success: function (result) {
             if (result == 1) {
@@ -45,7 +45,7 @@ function onToggle() {
 function updateStatus(status_val) {
     $.ajax({
         type: "POST",
-        url: "https://api.srv3r.com/toggle/",
+        url: "https://peachpuff.srv3r.com/api/index.php",
         data: {toggle_update: true, status: status_val},
         success: function (result) {
             console.log(result);
@@ -57,7 +57,7 @@ function updateStatus(status_val) {
 function lastUpdated() {
     $.ajax({
         type: "GET",
-        url: "https://api.srv3r.com/toggle/",
+        url: "https://peachpuff.srv3r.com/api/index.php",
         data: {toggle_updated: true},
         success: function (result) {
             document.getElementById("updatedAt").innerText = "Last updated at: " + result;
@@ -66,9 +66,10 @@ function lastUpdated() {
 }
 
 $(document).ready(function () {
-    putStatus();//Set button to current status
-    onToggle();//Update when toggled
-    statusText();//Last updated text
+    //Called on page load:
+    putStatus();
+    onToggle();
+    statusText();
 });
 </script>
 </head>
