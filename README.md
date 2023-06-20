@@ -1,2 +1,3 @@
 # PHP-MySQL-Toggle-Button
-PHP MySQL Toggle Button by corbpie
+
+These files are originally written by corbpie in his [blog](https://write.corbpie.com/live-toggle-button-status-update-with-ajax/).
